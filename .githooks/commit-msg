@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# Enforce Conventional Commits:
+# <type>(<scope>): <subject>
+# or
+# <type>: <subject>
+
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG="$(cat "$COMMIT_MSG_FILE")"
+
+PATTERN='^(feat|fix|docs|style|refactor|test|chore|build|ci|perf|revert)(\([a-z0-9._-]+\))?!?: .+'
+
+if printf '%s' "$COMMIT_MSG" | grep -Eq "$PATTERN"; then
+  exit 0
+fi
+
+echo "ERROR: Commit message must follow Conventional Commits." >&2
+echo "Example: feat(nav): add top bar routing" >&2
+echo "Allowed types: feat, fix, docs, style, refactor, test, chore, build, ci, perf, revert" >&2
+exit 1

@@ -1,0 +1,19 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "flutter": true,
+        "New-Item": true,
+        "Out-Null": true,
+        "Add-Type": true,
+        "New-Object": true,
+        "Test-Path": true,
+        "git config": true,
+        "git commit": true,
+        "git check-ignore": true,
+        "RSA": true,
+        "EC": true,
+        "OPENSSH": true,
+        "PRIVATE": true,
+        "ForEach-Object": true,
+        "git add": true
+    }
+}

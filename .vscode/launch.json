@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter Web (Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "cwd": "${workspaceFolder}/src/angelic_solace",
+      "program": "lib/main.dart",
+      "deviceId": "chrome",
+      "preLaunchTask": "Flutter: pub get (angelic_solace)"
+    },
+    {
+      "name": "Flutter Web (Edge)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "cwd": "${workspaceFolder}/src/angelic_solace",
+      "program": "lib/main.dart",
+      "deviceId": "edge",
+      "preLaunchTask": "Flutter: pub get (angelic_solace)"
+    }
+  ]
+}
