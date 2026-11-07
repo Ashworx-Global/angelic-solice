@@ -1,17 +1,11 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.name }}</title>
-  </head>
-  <body>
-    <h1>{{ site.name }}</h1>
-    <p>{{ site.orderingNote }}</p>
-    <ul>
-      {% for product in products %}
-        <li>{{ product.name }}</li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+---
+layout: layouts/base.njk
+title: Home
+---
+<h1>{{ site.name }}</h1>
+<p>{{ site.orderingNote }}</p>
+<ul>
+  {% for product in products %}
+    <li>{{ product.name }}</li>
+  {% endfor %}
+</ul>

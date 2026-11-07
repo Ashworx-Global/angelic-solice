@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ '/' | url }}">
+        <img src="{{ '/assets/images/solace-creations-logo.svg' | url }}" alt="{{ site.name }} logo" class="brand-logo" width="44" height="44">
+        <span class="brand-name">{{ site.name }}</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          {% for item in site.nav %}
+            <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">{{ site.name }}</p>
+        <p class="muted">{{ site.orderingNote }}</p>
+      </div>
+      <div>
+        <p class="footer-heading">Connect</p>
+        <ul class="contact-list">
+          {% if site.contact.email %}<li><strong>Email:</strong> {{ site.contact.email }}</li>{% endif %}
+          {% if site.contact.instagram %}<li><strong>Instagram:</strong> {{ site.contact.instagram }}</li>{% endif %}
+          {% if site.contact.facebook %}<li><strong>Facebook:</strong> {{ site.contact.facebook }}</li>{% endif %}
+        </ul>
+        {% if site.contact.note %}<p class="muted small">{{ site.contact.note }}</p>{% endif %}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

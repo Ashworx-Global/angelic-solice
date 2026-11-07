@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="ptitle">
+  <title id="ptitle">Soap product image placeholder</title>
+  <rect width="400" height="300" fill="#f3eadc"/>
+  <rect x="120" y="70" width="160" height="140" rx="22" fill="#e6dccb" stroke="#cdbfa8"/>
+  <rect x="145" y="102" width="110" height="14" rx="7" fill="#d8ccb8"/>
+  <rect x="145" y="124" width="110" height="14" rx="7" fill="#d8ccb8"/>
+  <text x="200" y="250" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#6b6256">Product photo placeholder</text>
+</svg>

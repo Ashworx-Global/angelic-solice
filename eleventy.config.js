@@ -1,5 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/assets");
+  eleventyConfig.ignores.add("site/README.md");
 
   return {
     pathPrefix: "/angelic-solice/",
