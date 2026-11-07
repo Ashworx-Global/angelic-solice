@@ -49,3 +49,10 @@ app.*.map.json
 # Local brainstorming artifacts
 .superpowers/
 
+# Node / 11ty site build
+node_modules/
+_site/
+npm-debug.log*
+.env
+.env.*
+
