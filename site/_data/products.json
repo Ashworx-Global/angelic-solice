@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lavender-calm-bar",
+    "slug": "lavender-calm-bar",
+    "name": "Lavender Calm Bar",
+    "category": "Bar soap",
+    "short_description": "A gentle lavender bar with a soft, calming scent.",
+    "description": "Mock product: a soothing bar soap inspired by lavender fields. Replace this text with your real product story, ingredients, and highlights.",
+    "size": "4.5 oz",
+    "price": "$8.00",
+    "image": "/assets/images/product-placeholder.svg",
+    "status": "available",
+    "order_url": null,
+    "featured": true
+  },
+  {
+    "id": "citrus-garden-bar",
+    "slug": "citrus-garden-bar",
+    "name": "Citrus Garden Bar",
+    "category": "Bar soap",
+    "short_description": "Bright citrus notes for a fresh, uplifting wash.",
+    "description": "Mock product: a crisp, sunny bar with citrus character. Replace with your final scent notes, ingredients, and care details.",
+    "size": "4.5 oz",
+    "price": "$8.00",
+    "image": "/assets/images/product-placeholder.svg",
+    "status": "coming_soon",
+    "order_url": null,
+    "featured": true
+  },
+  {
+    "id": "oat-honey-gift-set",
+    "slug": "oat-honey-gift-set",
+    "name": "Oat & Honey Gift Set",
+    "category": "Gift set",
+    "short_description": "A comforting soap gift set with warm, familiar notes.",
+    "description": "Mock product: a gift-ready set featuring gentle, nourishing-feel soaps. Replace with the exact items, packaging details, and highlights.",
+    "size": "Set of 3",
+    "price": "$22.00",
+    "image": "/assets/images/product-placeholder.svg",
+    "status": "seasonal",
+    "order_url": null,
+    "featured": false
+  }
+]

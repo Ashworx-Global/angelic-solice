@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Solace Creations</title>
+    <title>{{ site.name }}</title>
   </head>
   <body>
-    <h1>Solace Creations</h1>
+    <h1>{{ site.name }}</h1>
+    <p>{{ site.orderingNote }}</p>
+    <ul>
+      {% for product in products %}
+        <li>{{ product.name }}</li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

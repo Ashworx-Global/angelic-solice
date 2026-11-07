@@ -1,0 +1,19 @@
+{
+  "name": "Solace Creations",
+  "tagline": "Handcrafted soaps, thoughtfully made",
+  "description": "Solace Creations offers a clean, professional showcase of handcrafted soaps and soap products.",
+  "url": "https://ashworx-global.github.io/angelic-solice/",
+  "orderingNote": "Ordering will be available through our ordering site soon.",
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Collection", "url": "/collection/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Contact", "url": "/about/#contact" }
+  ],
+  "contact": {
+    "email": "hello@example.com (TODO: replace)",
+    "instagram": "@solacecreations (TODO: replace)",
+    "facebook": "Solace Creations (TODO: replace)",
+    "note": "Update these contact placeholders in site/_data/site.json."
+  }
+}
