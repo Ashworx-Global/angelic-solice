@@ -27,8 +27,8 @@ Edit **`site/_data/site.json`** for brand text, navigation, the global ordering 
 
 ## Logo (from PSD)
 
-The branding source file is **`Solace creations logo.psd`** in the repository root. Web browsers cannot use PSD files directly. Export the PSD to a web format (SVG preferred if available, otherwise PNG/WebP) and replace:
-- `site/assets/images/solace-creations-logo.svg` (or update the layout to point to your exported file).
+Branding source files in the repository root include **`logo.psd`** (and **`Solace creations logo.psd`**). Web browsers cannot use PSD files directly. Export the PSD you want to use to a web format (PNG with transparency or WebP/SVG) and replace/update:
+- `site/assets/images/solace-creations-logo.png` (currently referenced by the site header; keep the filename or update `site/_includes/layouts/base.njk`).
 
 ## Local development
 
