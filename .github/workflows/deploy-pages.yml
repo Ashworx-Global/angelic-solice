@@ -25,8 +25,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
       - name: Install dependencies
         run: npm ci
       - name: Build site
@@ -37,12 +35,21 @@ jobs:
           path: _site
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
+      - name: Configure Pages
+        id: configure
+        continue-on-error: true
+        uses: actions/configure-pages@v5
       - name: Deploy to GitHub Pages
         id: deployment
+        if: steps.configure.outcome == 'success'
         uses: actions/deploy-pages@v4
+      - name: Pages deployment skipped
+        if: steps.configure.outcome != 'success'
+        run: |
+          echo "::warning::GitHub Pages is not configured/enabled for this repository. The Eleventy build succeeded and the artifact was uploaded, but deployment was skipped (private repositories may require an eligible plan). Enable Pages with source 'GitHub Actions' in repository settings when available."
