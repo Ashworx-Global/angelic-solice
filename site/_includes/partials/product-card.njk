@@ -1,11 +1,13 @@
 <article class="product-card">
-  <img src="{{ (product.image or '/assets/images/product-placeholder.svg') | url }}" alt="{{ product.name }}" class="product-image" loading="lazy" width="400" height="300">
+  <img src="{{ (product.image or '/assets/images/product-placeholder.svg') | assetUrl }}" alt="{{ product.name or 'Soap product' }}" class="product-image" loading="lazy" width="400" height="300">
   <div class="product-body">
-    <p class="product-category">{{ product.category }}{% if product.status and product.status != 'available' %} · <span class="status">{{ product.status | replace('_', ' ') }}</span>{% endif %}</p>
-    <h3 class="product-name">{{ product.name }}</h3>
-    <p class="product-desc">{{ product.short_description }}</p>
+    <p class="product-category">{{ product.category or 'Soap product' }}{% if product.status and product.status != 'available' %} · <span class="status">{{ product.status | replace('_', ' ') }}</span>{% endif %}</p>
+    <h3 class="product-name">{{ product.name or 'Untitled product' }}</h3>
+    {% if product.short_description %}<p class="product-desc">{{ product.short_description }}</p>{% endif %}
     {% if product.description %}<p class="muted small">{{ product.description }}</p>{% endif %}
-    <p class="product-meta"><span>{{ product.size }}</span><span>{{ product.price }}</span></p>
+    {% if product.size or product.price %}
+    <p class="product-meta"><span>{{ product.size or '' }}</span><span>{{ product.price or '' }}</span></p>
+    {% endif %}
     {% if product.order_url %}
       <p><a class="button button-secondary" href="{{ product.order_url }}" rel="noopener">View ordering site</a></p>
     {% else %}

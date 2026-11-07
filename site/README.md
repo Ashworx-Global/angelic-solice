@@ -14,7 +14,7 @@ Recommended fields:
 - `description`: longer details/highlights/ingredients notes (optional but supported)
 - `size`: display size/weight/count (e.g. `4.5 oz`, `Set of 3`)
 - `price`: display price (e.g. `$8.00`)
-- `image`: image path (e.g. `/assets/images/my-soap.jpg`; place files in `site/assets/images/`)
+- `image`: image path for local assets, e.g. `/assets/images/my-soap.jpg` (place files in `site/assets/images/`; use a root-relative path **without** `/angelic-solice/` — the site build adds the GitHub Pages base path). You can also use a full `https://...` image URL.
 - `status`: `available`, `coming_soon`, or `seasonal`
 - `order_url`: `null` for now; set to a full URL when your ordering site is ready
 - `featured`: `true` to show on the home page
