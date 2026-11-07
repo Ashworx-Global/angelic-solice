@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: Soap Collection
+description: Browse Solace Creations soaps and soap products. Update this catalog by editing site/_data/products.json.
+---
+<section class="container section">
+  <div class="section-header">
+    <div>
+      <h1>Soap collection</h1>
+      <p class="muted">Browse our current soaps and soap products. This catalog is rendered from <code>site/_data/products.json</code>, so you can add or update items by editing that file.</p>
+    </div>
+  </div>
+  <p class="note">{{ site.orderingNote }}</p>
+  <div class="product-grid">
+    {% for product in products %}
+      {% include "partials/product-card.njk" %}
+    {% endfor %}
+  </div>
+</section>

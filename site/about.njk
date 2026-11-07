@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: About
+description: Learn about Solace Creations and how to connect.
+---
+<section class="container section">
+  <h1>About {{ site.name }}</h1>
+  <p>{{ site.description }}</p>
+  <div class="note">
+    <p><strong>Brand story placeholder:</strong> Replace this section with your Solace Creations story — what inspires your soaps, how they’re made, and what makes your products special.</p>
+  </div>
+
+  <h2 id="connect">Connect</h2>
+  <p class="muted">Ordering is not live on this site yet. {{ site.orderingNote }}</p>
+  <ul class="contact-list">
+    {% if site.contact.email %}<li><strong>Email:</strong> {{ site.contact.email }}</li>{% endif %}
+    {% if site.contact.instagram %}<li><strong>Instagram:</strong> {{ site.contact.instagram }}</li>{% endif %}
+    {% if site.contact.facebook %}<li><strong>Facebook:</strong> {{ site.contact.facebook }}</li>{% endif %}
+  </ul>
+  {% if site.contact.note %}<p class="muted small">{{ site.contact.note }}</p>{% endif %}
+</section>

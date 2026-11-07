@@ -1,11 +1,39 @@
 ---
 layout: layouts/base.njk
 title: Home
+description: Solace Creations handcrafted soaps and soap products — a warm, professional collection.
 ---
-<h1>{{ site.name }}</h1>
-<p>{{ site.orderingNote }}</p>
-<ul>
-  {% for product in products %}
-    <li>{{ product.name }}</li>
-  {% endfor %}
-</ul>
+<section class="container hero">
+  <div>
+    <h1>{{ site.tagline }}</h1>
+    <p>{{ site.description }}</p>
+    <p class="note">{{ site.orderingNote }}</p>
+    <p><a class="button" href="{{ '/collection/' | url }}">View the collection</a></p>
+  </div>
+  <div class="hero-card" aria-hidden="true">
+    <p>Warm Boutique hero image placeholder<br><span class="small">Replace with a lifestyle or product photo</span></p>
+  </div>
+</section>
+
+<section class="container section" aria-labelledby="featured-heading">
+  <div class="section-header">
+    <h2 id="featured-heading">Featured soaps</h2>
+    <a href="{{ '/collection/' | url }}">See all products</a>
+  </div>
+  <div class="product-grid">
+    {% set featuredCount = 0 %}
+    {% for product in products %}
+      {% if product.featured and featuredCount < 3 %}
+        {% set featuredCount = featuredCount + 1 %}
+        {% include "partials/product-card.njk" %}
+      {% endif %}
+    {% endfor %}
+    {% if featuredCount == 0 %}
+      {% for product in products %}
+        {% if loop.index0 < 3 %}
+          {% include "partials/product-card.njk" %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
