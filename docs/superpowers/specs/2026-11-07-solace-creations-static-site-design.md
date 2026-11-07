@@ -1,7 +1,7 @@
 # Solace Creations Static Website — Design
 
 **Date:** 2026-11-07  
-**Status:** Draft (pending partner approval)  
+**Status:** Approved (2026-11-07)  
 **Approach:** Eleventy (11ty) static site + GitHub Actions deploy to GitHub Pages
 
 ## Intent and why
